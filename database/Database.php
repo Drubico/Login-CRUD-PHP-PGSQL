@@ -6,8 +6,6 @@ session_start();
 Este archivo se encarga de conectar a la base de datos
 y traer un objeto PDO
 
-Recuerda cambiar tus credenciales, y tal vez ponerlas en
-un archivo env: https://parzibyte.me/blog/2018/06/30/leer-archivo-configuracion-ini-php/
 ================================
  */
 global $base_de_datos;

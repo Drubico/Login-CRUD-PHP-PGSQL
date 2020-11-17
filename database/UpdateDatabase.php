@@ -21,7 +21,7 @@ if (
 
 #Si todo va bien, se ejecuta esta parte del código...
 
-include_once "../database/base_de_datos.php";
+include_once "./Database.php";
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $edad = $_POST["edad"];
@@ -29,7 +29,7 @@ $edad = $_POST["edad"];
 $sentencia = $base_de_datos->prepare("UPDATE mascotas SET nombre = ?, edad = ? WHERE id = ?;");
 $resultado = $sentencia->execute([$nombre, $edad, $id]); # Pasar en el mismo orden de los ?
 if ($resultado === true) {
-    header("Location: ../app/CRUD/Read.php");
+    header("Location: ../app/Read.php");
 } else {
     echo "Algo salió mal. Por favor verifica que la tabla exista, así como el ID del usuario";
 }

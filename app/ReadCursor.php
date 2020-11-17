@@ -11,7 +11,7 @@ a través de un arreglo
 */
 ?>
 <?php
-include_once "../database/base_de_datos.php";
+include_once "../database/Database.php";
 $consulta = "select id, nombre, edad from mascotas";
 # Preparar sentencia e indicar que vamos a usar un cursor
 $sentencia = $base_de_datos->prepare($consulta, [
@@ -23,12 +23,11 @@ $sentencia->execute();
 ?>
 
 <!--Recordemos que podemos intercambiar HTML y PHP como queramos-->
-<?php include_once (ROOT_PATH."app/MenuBar.php"); ?>
+<?php include_once './header.php'; ?>
 <div class="row">
 <!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
 	<div class="col-12">
 		<h1>Listar con cursor</h1>
-		<a href="//parzibyte.me/blog" target="_blank">By Parzibyte</a>
 		<br>
 		<table class="table table-bordered">
 			<thead class="thead-dark">
@@ -59,4 +58,4 @@ $sentencia->execute();
 		</table>
 	</div>
 </div>
-<?php include_once "../app/BarDown.php" ?>
+<?php include_once "./footer.php" ?>

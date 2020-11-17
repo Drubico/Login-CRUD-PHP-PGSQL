@@ -15,7 +15,7 @@ if (!isset($_POST["nombre"]) || !isset($_POST["edad"])) {
 
 #Si todo va bien, se ejecuta esta parte del código...
 
-include_once "../database/base_de_datos.php";
+include_once "../database/Database.php";
 $nombre = $_POST["nombre"];
 $edad = $_POST["edad"];
 
@@ -32,7 +32,7 @@ $resultado = $sentencia->execute([$nombre, $edad]); # Pasar en el mismo orden de
 
 if ($resultado === true) {
     # Redireccionar a la lista
-	header("Location: ../app/CRUD/Read.php");
+	header("Location: ./Read.php");
 } else {
     echo "Algo salió mal. Por favor verifica que la tabla exista";
 }

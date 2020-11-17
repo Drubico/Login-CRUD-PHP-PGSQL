@@ -12,11 +12,11 @@ if (!isset($_GET["id"])) {
 }
 
 $id = $_GET["id"];
-include_once "../database/base_de_datos.php";
+include_once "../database/Database.php";
 $sentencia = $base_de_datos->prepare("DELETE FROM mascotas WHERE id = ?;");
 $resultado = $sentencia->execute([$id]);
 if ($resultado === true) {
-    header("Location: ../app/CRUD/Read.php");
+    header("Location: ./Read.php");
 } else {
     echo "Algo salió mal";
 }

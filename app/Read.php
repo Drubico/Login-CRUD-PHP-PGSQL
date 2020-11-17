@@ -10,17 +10,16 @@ los mismos como un arreglo
 */
 ?>
 <?php
-include_once "../../database/base_de_datos.php";
+include_once "../database/Database.php";
 $sentencia = $base_de_datos->query("select id,nombre, edad from mascotas");
 $mascotas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!--Recordemos que podemos intercambiar HTML y PHP como queramos-->
-<?php include_once (ROOT_PATH."app/MenuBar.php"); ?>
+<?php include_once ('./body/header.php'); ?>
 <div class="row">
 <!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
 	<div class="col-12">
 		<h1>Listar con arreglo</h1>
-		<a href="//parzibyte.me/blog" target="_blank">By Parzibyte</a>
 		<br>
 		<div class="table-responsive">
 			<table class="table table-bordered">
@@ -52,4 +51,4 @@ $mascotas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 		</div>
 	</div>
 </div>
-<?php include_once "../app/BarDown.php" ?>
+<?php include_once "./body/footer.php" ?>
