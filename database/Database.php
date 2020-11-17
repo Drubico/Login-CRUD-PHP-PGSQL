@@ -11,7 +11,7 @@ y traer un objeto PDO
 global $base_de_datos;
 $contraseña = "admin";
 $usuario = "admin";
-$nombreBaseDeDatos = "mascotas";
+$nombreBaseDeDatos = "sed";
 # Puede ser 127.0.0.1 o el nombre de tu equipo; o la IP de un servidor remoto
 $rutaServidor = "127.0.0.1";
 $puerto = "5432";

@@ -12,7 +12,7 @@ if (!isset($_GET["id"])) {
 }
 
 $id = $_GET["id"];
-include_once "../database/Database.php";
+include "../database/Database.php";
 $sentencia = $base_de_datos->prepare("DELETE FROM mascotas WHERE id = ?;");
 $resultado = $sentencia->execute([$id]);
 if ($resultado === true) {

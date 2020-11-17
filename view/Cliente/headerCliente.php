@@ -14,25 +14,27 @@ incluido y reutilizado por otros archivos
     <title>CRUD</title>
     <!-- Cargar el CSS de Boostrap-->
 
-    <link href="./style/bootstrap.min.css" rel="stylesheet">
+    <link href="../../resources/style/bootstrap.min.css" rel="stylesheet">
     <!-- Cargar estilos propios -->
-    <link href="./style/style.css" rel="stylesheet">
+    <link href="../../resources/style/style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Definición del menú -->
-        CRUD
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" target="_blank" href="../index.php">
+        Cliente
         </a>
         <div class="collapse navbar-collapse" id="miNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./Read.php">Listar (arreglo)</a>
+                    <a class="nav-link" href="./listar.php">Listar (arreglo)</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./ReadCursor.php">Listar (cursor)</a>
+                    <a class="nav-link" href="./listarCursor.php">Listar (cursor)</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./CRUD.php">Agregar</a>
+                    <a class="nav-link" href="./formulario.php">Agregar</a>
                 </li>
             </ul>
         </div>

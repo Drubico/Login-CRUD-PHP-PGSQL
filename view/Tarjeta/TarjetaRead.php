@@ -10,12 +10,12 @@ los mismos como un arreglo
 */
 ?>
 <?php
-include_once "../database/Database.php";
+include "../database/Database.php";
 $sentencia = $base_de_datos->query("select id,nombre, edad from mascotas");
 $mascotas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!--Recordemos que podemos intercambiar HTML y PHP como queramos-->
-<?php include_once ('./body/header.php'); ?>
+<?php include ('./body/header.php'); ?>
 <div class="row">
 <!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
 	<div class="col-12">
@@ -51,4 +51,4 @@ $mascotas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 		</div>
 	</div>
 </div>
-<?php include_once "./body/footer.php" ?>
+<?php include "./body/footer.php" ?>

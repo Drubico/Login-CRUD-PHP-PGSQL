@@ -15,7 +15,7 @@ if (!isset($_POST["nombre"]) || !isset($_POST["edad"])) {
 
 #Si todo va bien, se ejecuta esta parte del código...
 
-include_once "../database/Database.php";
+include "../database/Database.php";
 $nombre = $_POST["nombre"];
 $edad = $_POST["edad"];
 

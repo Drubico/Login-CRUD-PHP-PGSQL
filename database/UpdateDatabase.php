@@ -21,7 +21,7 @@ if (
 
 #Si todo va bien, se ejecuta esta parte del código...
 
-include_once "./Database.php";
+include "./Database.php";
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $edad = $_POST["edad"];

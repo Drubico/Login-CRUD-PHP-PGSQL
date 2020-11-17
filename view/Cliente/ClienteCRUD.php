@@ -10,7 +10,7 @@ los datos
 ?>
 <?php
 
-include_once './header.php'; ?>
+include './headerCliente.php'; ?>
 <div class="row">
 	<div class="col-12">
 		<h1>Agregar</h1>
@@ -29,4 +29,4 @@ include_once './header.php'; ?>
 	</div>
 </div>
 <?php 
-include_once  './footer.php'; ?>
+include  '../../resources/footer.php'; ?>
