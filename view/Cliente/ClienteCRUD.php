@@ -14,17 +14,20 @@ include './headerCliente.php'; ?>
 <div class="row">
 	<div class="col-12">
 		<h1>Agregar</h1>
-		<form action="./Create.php" method="POST">
+		<form action="../../app/cliente/CCreate.php" method="POST">
 			<div class="form-group">
 				<label for="nombre">Nombre</label>
-				<input required name="nombre" type="text" id="nombre" placeholder="Nombre de mascota" class="form-control">
+				<input required name="nombre" type="text" id="nombre" placeholder="Nombre de Cliente" class="form-control">
 			</div>
 			<div class="form-group">
-				<label for="edad">Edad</label>
-				<input required name="edad" type="number" id="edad" placeholder="Edad de mascota" class="form-control">
+				<label for="apellido">Apellido</label>
+				<input required name="apellido" type="text" id="apellido" placeholder="Apellido de Cliente" class="form-control">
 			</div>
-			<button type="submit" class="btn btn-success">Guardar</button>
-			<a href="./CRUD/Read.php" class="btn btn-warning">Ver todas</a>
+			<div class="form-group">
+				<label for="nombre">DUI</label>
+				<input required name="dui" type="text" id="dui" placeholder="DUI de Cliente" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-success">Guardar Cliente</button>
 		</form>
 	</div>
 </div>

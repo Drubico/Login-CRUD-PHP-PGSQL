@@ -28,13 +28,13 @@ incluido y reutilizado por otros archivos
         <div class="collapse navbar-collapse" id="miNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./listar.php">Listar (arreglo)</a>
+                    <a class="nav-link" href="./ClienteRead.php">Listar (arreglo)</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./listarCursor.php">Listar (cursor)</a>
+                    <a class="nav-link" href="./ClienteReadCursor.php">Listar (cursor)</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./formulario.php">Agregar</a>
+                    <a class="nav-link" href="./ClienteCRUD.php">Agregar</a>
                 </li>
             </ul>
         </div>
