@@ -2,13 +2,20 @@
 drop table IF EXISTS Tarjeta ;
 drop table IF EXISTS Cuentas ;
 drop table IF EXISTS Cliente ;
-drop table IF EXISTS Usuario ;
+drop table IF EXISTS public."user" ;
 
-Create table Usuario(
-ID  SERIAL PRIMARY KEY,
-userName varchar,
-passUser varchar
-);
+CREATE TABLE public."user"
+(
+   id serial, 
+   name character varying(250), 
+   email character varying(250), 
+   password character varying(250), 
+   mobno bigint, 
+   CONSTRAINT id PRIMARY KEY (id)
+) 
+WITH (
+  OIDS = FALSE
+)
 
 Create table Cliente(
 ID  SERIAL PRIMARY KEY,
@@ -56,7 +63,7 @@ insert into Tarjeta(cuentaID,numero_tarjeta,fecha,cvv)
 
 
 
-select * from usuario;
+select * from "user";
 
 select concat(cl.nombre,' ',cl.apellido) as nombre,
 Tr.numero_Tarjeta 

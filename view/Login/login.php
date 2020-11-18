@@ -6,6 +6,7 @@ $user = "admin";
 $password = "admin"; 
 $connection_string = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password} ";
 $dbconn = pg_connect($connection_string);
+
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     
     $hashpassword = md5($_POST['pwd']);
