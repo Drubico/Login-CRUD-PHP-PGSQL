@@ -9,7 +9,7 @@ drop table IF EXISTS Cuentas ;
 drop table IF EXISTS Cliente ;
 drop table IF EXISTS public."user" ;
 
-
+-- APARTIR DE AQUI SE CREA LA BASE
 
 CREATE TABLE public."user"
 (
