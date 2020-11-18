@@ -1,3 +1,4 @@
+-- Database: sed
 drop table IF EXISTS Tarjeta ;
 drop table IF EXISTS Cuentas ;
 drop table IF EXISTS Cliente ;
@@ -8,6 +9,7 @@ ID  SERIAL PRIMARY KEY,
 userName varchar,
 passUser varchar
 );
+
 Create table Cliente(
 ID  SERIAL PRIMARY KEY,
 Nombre varchar,
@@ -16,12 +18,12 @@ DUI varchar
 );
 Create table Cuentas(
 ID  SERIAL PRIMARY KEY,
-ClienteID int,
+ClienteID int ,
 cuenta varchar
 );
 Create table Tarjeta(
 ID  SERIAL PRIMARY KEY,
-cuentaID  int,
+cuentaID  int ,
 numero_tarjeta varchar,
 fecha varchar,
 cvv varchar
@@ -29,12 +31,14 @@ cvv varchar
 alter table Cuentas 
 ADD CONSTRAINT ClientexCuenta 
 FOREIGN KEY (ClienteID) 
-REFERENCES Cliente (ID);
+REFERENCES Cliente (ID)
+ON DELETE CASCADE;
 
 alter table Tarjeta 
 ADD CONSTRAINT CuentaxTarjeta 
 FOREIGN KEY (cuentaID) 
-REFERENCES Tarjeta (ID);
+REFERENCES Tarjeta (ID)
+ON DELETE CASCADE;
 
 
 
@@ -71,3 +75,5 @@ where cl.id=1;
 SELECT ID ,cuenta,ClienteID FROM Cuentas where ClienteID=1;
 
 select * from cliente;
+select * from cuentas;
+select * from tarjeta;
