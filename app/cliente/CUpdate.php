@@ -36,7 +36,7 @@ if (!$cliente) {
                     <input value="<?php echo $cliente->nombre; ?>" required name="nombre" type="text" id="nombre" placeholder="Nombre de cliente" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="apellido">Apellido</label>
+                    <label for="apelli">Apellido</label>
                     <input value="<?php echo $cliente->apellido; ?>" required name="apellido" type="text" id="apellido" placeholder="Apellido de cliente" class="form-control">
                 </div>
                 <div class="form-group">
