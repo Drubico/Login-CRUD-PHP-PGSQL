@@ -81,8 +81,8 @@ incluido y reutilizado por otros archivos
 							<td><?php echo $tarjeta->id ?></td>
 							<td><?php echo $tarjeta->numero_tarjeta ?></td>
 							<td><?php echo $tarjeta->fecha ?></td>
-							<td><a class="btn btn-warning" href="<?php echo "../../app/cuentas/CuUpdate.php?id=" . $tarjeta->id?>">Editar 📝</a></td>
-							<td><a class="btn btn-danger" href="<?php echo "../../app/cuentas/CuDelete.php?id=" . $tarjeta->id?>">Eliminar 🗑️</a></td>
+							<td><a class="btn btn-warning" href="<?php echo "../../app/tarjeta/TUpdate.php?id=" . $tarjeta->id?>">Editar 📝</a></td>
+							<td><a class="btn btn-danger" href="<?php echo "../../app/tarjeta/TDelete.php?id=" . $tarjeta->id?>">Eliminar 🗑️</a></td>
 						</tr>
 					<?php } ?>
 				</tbody>

@@ -33,7 +33,7 @@ include './headerTarjeta.php'; ?>
 				<label for="cvv">Numero de Cvv</label>
 				<input required name="cvv" type="text" id="cvv" placeholder="Numero de Cvv" class="form-control">
 			</div>
-			<input type="text" name="cuentaid" value="<?php echo $cuenta->id; ?>">
+			<input type="hidden" name="cuentaid" value="<?php echo $cuenta->id; ?>">
 			<button type="submit" class="btn btn-success">Guardar</button>
 			<a href="../Cliente/ClienteCRUD.php" class="btn btn-warning">Regresar</a>
 		</form>
