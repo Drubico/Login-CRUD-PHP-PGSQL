@@ -13,7 +13,7 @@ if (!isset($_GET["id"])) {
 
 $id = $_GET["id"];
 include "../../database/Database.php";
-$sentencia = $base_de_datos->prepare("DELETE FROM cliente WHERE id = ?;");
+$sentencia = $base_de_datos->prepare("DELETE FROM cuentas WHERE id = ?;");
 $resultado = $sentencia->execute([$id]);
 if ($resultado === true) {
     header("Location: ../../view/Cliente/ClienteRead.php");
