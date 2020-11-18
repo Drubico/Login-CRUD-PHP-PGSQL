@@ -22,7 +22,7 @@ incluido y reutilizado por otros archivos
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" target="_blank" href="../index.php">
-        Login
+        
         </a>
     </nav>
     <!-- Termina la definición del menú -->
