@@ -10,8 +10,12 @@ los mismos como un arreglo
 */
 ?>
 <?php
-include "../database/Database.php";
-$sentencia = $base_de_datos->query("select id,nombre, edad from mascotas");
+if (!isset($_GET["id"])) {
+    exit();
+}
+$id = $_GET["id"];
+include "../../database/Database.php";
+$sentencia = $base_de_datos->query("select id,(nombre+apellido) as Nombre,numero_tarjeta, edad from mascotas");
 $mascotas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!--Recordemos que podemos intercambiar HTML y PHP como queramos-->

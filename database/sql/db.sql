@@ -53,6 +53,11 @@ insert into Tarjeta(cuentaID,numero_tarjeta,fecha,cvv)
 
 
 select * from usuario;
-select * from Tarjeta Tr 
+
+select cl.nombre,cl.apellido, from Tarjeta Tr 
 inner join Cuentas Cu
-on Cu.ID = Tr.CuentaID;
+on Cu.ID = Tr.CuentaID
+inner join Cliente Cl
+on Cl.ID=Cu.ClienteID;
+
+select * from cliente;

@@ -32,6 +32,7 @@ $clientes = $sentencia->fetchAll(PDO::FETCH_OBJ);
 						<th>Dui</th>
 						<th>Editar</th>
 						<th>Eliminar</th>
+						<th>Tarjetas</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -47,6 +48,7 @@ $clientes = $sentencia->fetchAll(PDO::FETCH_OBJ);
 							<td><?php echo $cliente->dui ?></td>
 							<td><a class="btn btn-warning" href="<?php echo "../../app/cliente/CUpdate.php?id=" . $cliente->id?>">Editar 📝</a></td>
 							<td><a class="btn btn-danger" href="<?php echo "../../app/cliente/CDelete.php?id=" . $cliente->id?>">Eliminar 🗑️</a></td>
+							<td><a class="btn btn-primary" href="<?php echo "../Cuentas/CuentaRead.php?id=" . $cliente->id?>">Cuentas 💳</a></td>
 						</tr>
 					<?php } ?>
 				</tbody>
