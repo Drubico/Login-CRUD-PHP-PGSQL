@@ -21,6 +21,7 @@ include './headerTarjeta.php'; ?>
 	<div class="col-12">
 		<h1>Agregar</h1>
 		<form action="../../app/tarjeta/TCreate.php" method="POST">
+		<input type="hidden" name="cuentaid" value="<?php echo $cuenta->id; ?>">
 			<div class="form-group">
 				<label for="numero_tarjeta">Numero de Tarjeta</label>
 				<input required name="numero_tarjeta" type="text" id="numero_tarjeta" placeholder="Numero de Tarjeta" class="form-control">
@@ -33,7 +34,6 @@ include './headerTarjeta.php'; ?>
 				<label for="cvv">Numero de Cvv</label>
 				<input required name="cvv" type="text" id="cvv" placeholder="Numero de Cvv" class="form-control">
 			</div>
-			<input type="hidden" name="cuentaid" value="<?php echo $cuenta->id; ?>">
 			<button type="submit" class="btn btn-success">Guardar</button>
 			<a href="../Cliente/ClienteCRUD.php" class="btn btn-warning">Regresar</a>
 		</form>

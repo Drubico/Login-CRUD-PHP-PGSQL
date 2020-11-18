@@ -1,8 +1,15 @@
 -- Database: sed
+select * from cliente;
+select * from cuentas;
+select * from tarjeta;
+select * from public."user";
+
 drop table IF EXISTS Tarjeta ;
 drop table IF EXISTS Cuentas ;
 drop table IF EXISTS Cliente ;
 drop table IF EXISTS public."user" ;
+
+
 
 CREATE TABLE public."user"
 (
@@ -15,7 +22,7 @@ CREATE TABLE public."user"
 ) 
 WITH (
   OIDS = FALSE
-)
+);
 
 Create table Cliente(
 ID  SERIAL PRIMARY KEY,
@@ -61,26 +68,6 @@ insert into Cuentas(ClienteID,Cuenta) values(1,'Credito');
 insert into Tarjeta(cuentaID,numero_tarjeta,fecha,cvv) 
 	values (1,'1234567890123456','20/03','500');
 
+insert into public."user"(name,email,password,mobno)
+	values('admin','admin@admin.com','21232f297a57a5a743894a0e4a801fc3',12345678);
 
-
-select * from "user";
-
-select concat(cl.nombre,' ',cl.apellido) as nombre,
-Tr.numero_Tarjeta 
-from Tarjeta Tr 
-inner join Cuentas Cu
-on Cu.ID = Tr.CuentaID
-inner join Cliente Cl
-on Cl.ID=Cu.ClienteID;
-
-select concat(cl.nombre,' ',cl.apellido) as nombre,
-cu.cuenta 
-from Cuentas Cu inner join Cliente cl
-on Cl.ID=Cu.ClienteID
-where cl.id=1;
-
-SELECT ID ,cuenta,ClienteID FROM Cuentas where ClienteID=1;
-
-select * from cliente;
-select * from cuentas;
-select * from tarjeta;
