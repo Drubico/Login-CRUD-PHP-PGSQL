@@ -1,8 +1,15 @@
--- Database: sed
+-- Database: 
+-- sed
+-- admin@admin.com -> admin
+-- postgres:
+-- user: admin ;; pass: admin 
+
 select * from cliente;
 select * from cuentas;
 select * from tarjeta;
 select * from public."user";
+
+-- ========================================================================================
 
 drop table IF EXISTS Tarjeta ;
 drop table IF EXISTS Cuentas ;
