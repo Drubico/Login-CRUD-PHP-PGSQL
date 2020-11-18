@@ -10,7 +10,7 @@ incluido y reutilizado por otros archivos
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Conexión de PHP con PostgreSQL usando PDO">
+    <meta name="description" content="CRUD">
     <title>CRUD</title>
     <!-- Cargar el CSS de Boostrap-->
 
@@ -27,12 +27,6 @@ incluido y reutilizado por otros archivos
         </a>
         <div class="collapse navbar-collapse" id="miNavbar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./ClienteRead.php">Listar (arreglo)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./ClienteReadCursor.php">Listar (cursor)</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./ClienteCRUD.php">Agregar</a>
                 </li>

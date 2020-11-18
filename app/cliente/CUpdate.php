@@ -29,18 +29,18 @@ if (!$cliente) {
     <div class="row">
         <div class="col-12">
             <h1>Editar</h1>
-            <form action="../../database/UpdateDatabase.php" method="POST">
+            <form action="./CUpdateDatabase.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $cliente->id; ?>">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input value="<?php echo $cliente->nombre; ?>" required name="nombre" type="text" id="nombre" placeholder="Nombre de cliente" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="nombre">Apellido</label>
+                    <label for="apellido">Apellido</label>
                     <input value="<?php echo $cliente->apellido; ?>" required name="apellido" type="text" id="apellido" placeholder="Apellido de cliente" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="nombre">DUI</label>
+                    <label for="dui">DUI</label>
                     <input value="<?php echo $cliente->dui; ?>" required name="dui" type="text" id="dui" placeholder="DUI de cliente" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">Guardar</button>

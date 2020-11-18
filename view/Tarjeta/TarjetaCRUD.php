@@ -9,24 +9,35 @@ los datos
 */
 ?>
 <?php
+$cuentaid = $_GET["id"];
+include "../../database/Database.php";
+$sentencia = $base_de_datos->prepare("SELECT id, clienteid,cuenta FROM cuentas WHERE id = ?;");
+$sentencia->execute([$cuentaid]);
+$cuenta = $sentencia->fetchObject();
 
-include './header.php'; ?>
+
+include './headerTarjeta.php'; ?>
 <div class="row">
 	<div class="col-12">
 		<h1>Agregar</h1>
-		<form action="./Create.php" method="POST">
+		<form action="../../app/tarjeta/TCreate.php" method="POST">
 			<div class="form-group">
-				<label for="nombre">Nombre</label>
-				<input required name="nombre" type="text" id="nombre" placeholder="Nombre de mascota" class="form-control">
+				<label for="numero_tarjeta">Numero de Tarjeta</label>
+				<input required name="numero_tarjeta" type="text" id="numero_tarjeta" placeholder="Numero de Tarjeta" class="form-control">
 			</div>
 			<div class="form-group">
-				<label for="edad">Edad</label>
-				<input required name="edad" type="number" id="edad" placeholder="Edad de mascota" class="form-control">
+				<label for="fecha">Fecha de Vencimiento(yy/mm)</label>
+				<input required name="fecha" type="text" id="fecha" placeholder="Fecha de Vencimiento(yy/mm)" class="form-control">
 			</div>
+			<div class="form-group">
+				<label for="cvv">Numero de Cvv</label>
+				<input required name="cvv" type="text" id="cvv" placeholder="Numero de Cvv" class="form-control">
+			</div>
+			<input type="text" name="cuentaid" value="<?php echo $cuenta->id; ?>">
 			<button type="submit" class="btn btn-success">Guardar</button>
-			<a href="./CRUD/Read.php" class="btn btn-warning">Ver todas</a>
+			<a href="../Cliente/ClienteCRUD.php" class="btn btn-warning">Regresar</a>
 		</form>
 	</div>
 </div>
 <?php 
-include  './footer.php'; ?>
+include  '../../resources/footer.php'; ?>

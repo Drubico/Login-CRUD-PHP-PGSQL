@@ -32,7 +32,7 @@ $clientes = $sentencia->fetchAll(PDO::FETCH_OBJ);
 						<th>Dui</th>
 						<th>Editar</th>
 						<th>Eliminar</th>
-						<th>Tarjetas</th>
+						<th>Cuentas</th>
 					</tr>
 				</thead>
 				<tbody>

@@ -1,5 +1,4 @@
-#Si la mascota existe, se ejecuta esta parte del código
-?>
+
 <?php include './header.php';?>
 <div class="row">
 	<div class="col-12">
