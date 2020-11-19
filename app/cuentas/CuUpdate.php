@@ -37,7 +37,7 @@ if (!$cuentas) {
                     <input value="<?php echo $cuentas->cuenta; ?>" required name="cuenta" type="text" id="cuenta" placeholder="Nombre de Cuenta" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">Guardar</button>
-                <a href="../../view/Cuentas/CuentaRead.php" class="btn btn-warning">Volver</a>
+                <a href="../../view/Cliente/ClienteRead.php" class="btn btn-warning">Volver</a>
             </form>
         </div>
     </div>
