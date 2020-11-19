@@ -24,7 +24,7 @@ include './headerTarjeta.php'; ?>
 		<input type="hidden" name="cuentaid" value="<?php echo $cuenta->id; ?>">
 			<div class="form-group">
 				<label for="numero_tarjeta">Numero de Tarjeta</label>
-				<input pattern="[0-9]{15}" title="tiene que ser formato : 15 numeros" required name="numero_tarjeta" type="text" id="numero_tarjeta" placeholder="Numero de Tarjeta" class="form-control">
+				<input pattern="[0-9]{16}" title="tiene que ser formato : 16 numeros" required name="numero_tarjeta" type="text" id="numero_tarjeta" placeholder="Numero de Tarjeta" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="fecha">Fecha de Vencimiento(yy/mm)</label>

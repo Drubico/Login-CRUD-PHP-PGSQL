@@ -34,15 +34,15 @@ if (!$tarjeta) {
                 <input type="hidden" name="cuentaid" value="<?php echo $tarjeta->cuentaid; ?>">
                 <div class="form-group">
                     <label for="numero_tarjeta">Numero de Tarjeta</label>
-                    <input value="<?php echo $tarjeta->numero_tarjeta; ?>" required name="numero_tarjeta" type="text" id="numero_tarjeta" placeholder="Numero de tarjeta" class="form-control">
+                    <input pattern="[0-9]{16}" title="tiene que ser formato : 16 numeros" value="<?php echo $tarjeta->numero_tarjeta; ?>" required name="numero_tarjeta" type="text" id="numero_tarjeta" placeholder="Numero de tarjeta" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="fecha">Fecha de vencimiento</label>
-                    <input value="<?php echo $tarjeta->fecha; ?>" required name="fecha" type="text" id="fecha" placeholder="Fecha de vencimiento" class="form-control">
+                    <input pattern="^\d{2}(\/)(((0)[0-9])|((1)[0-2]))$" title="tiene que ser formato : (yy/mm)" value="<?php echo $tarjeta->fecha; ?>" required name="fecha" type="text" id="fecha" placeholder="Fecha de vencimiento" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="cvv">CVV</label>
-                    <input value="<?php echo $tarjeta->cvv; ?>" required name="cvv" type="text" id="cvv" placeholder="CVV" class="form-control">
+                    <input pattern="[0-9]{3}" title="tiene que ser formato : 3 numeros" value="<?php echo $tarjeta->cvv; ?>" required name="cvv" type="text" id="cvv" placeholder="CVV" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">Guardar</button>
                 <a href="../../view/Cliente/ClienteRead.php" class="btn btn-warning">Volver</a>

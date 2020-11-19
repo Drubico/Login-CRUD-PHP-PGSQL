@@ -66,7 +66,7 @@ incluido y reutilizado por otros archivos
 					<tr>
 						<th>ID</th>
 						<th>Numero de Tarjeta</th>
-						<th>CVV</th>
+						<th>Fecha de  Vencimiento </th>
 						<th>Editar</th>
 						<th>Eliminar</th>
 					</tr>
