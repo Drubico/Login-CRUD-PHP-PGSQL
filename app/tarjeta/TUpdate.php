@@ -9,10 +9,14 @@ Este archivo muestra un formulario llenado automáticamente
  */
 
 if (!isset($_GET["id"])) {
-    exit();
+    $id=$tarjeta->id;
+    if(!isset($id)){
+        header('location: ../../view/Cliente/ClienteRead.php');
+    }
+}else{
+    $id = $_GET["id"];
 }
 
-$id = $_GET["id"];
 include "../../database/Database.php";
 $sentencia = $base_de_datos->prepare("SELECT id,cuentaid, numero_tarjeta,fecha,cvv FROM tarjeta WHERE id = ?;");
 $sentencia->execute([$id]);

@@ -22,16 +22,9 @@ incluido y reutilizado por otros archivos
 <body>
     <!-- Definición del menú -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" target="_blank" href="../index.php">
+        <a class="navbar-brand" target="_blank" href="./ClienteRead.php">
         Home
         </a>
-        <div class="collapse navbar-collapse" id="miNavbar">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./ClienteRead.php">Agregar</a>
-                </li>
-            </ul>
-        </div>
     </nav>
     <!-- Termina la definición del menú -->
     <main role="main" class="container">

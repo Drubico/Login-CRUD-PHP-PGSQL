@@ -7,12 +7,15 @@ Este archivo muestra un formulario llenado automáticamente
 (a partir del ID pasado por la URL) para editar
 ================================
  */
-
 if (!isset($_GET["id"])) {
-    exit();
+    $id=$cliente->id;
+    if(!isset($id)){
+        header('location: ../../view/Cliente/ClienteRead.php');
+    }
+}else{
+    $id = $_GET["id"];
 }
 
-$id = $_GET["id"];
 include "../../database/Database.php";
 $sentencia = $base_de_datos->prepare("SELECT id, nombre, apellido,dui FROM cliente WHERE id = ?;");
 $sentencia->execute([$id]);
@@ -33,15 +36,15 @@ if (!$cliente) {
                 <input type="hidden" name="id" value="<?php echo $cliente->id; ?>">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input value="<?php echo $cliente->nombre; ?>" required name="nombre" type="text" id="nombre" placeholder="Nombre de cliente" class="form-control">
+                    <input pattern="^([A-Z][a-z]+([ ]?[a-z]?['-]?[A-Z][a-z]+)*)$" title="Tienen que ser Letras" value="<?php echo $cliente->nombre; ?>" required name="nombre" type="text" id="nombre" placeholder="Nombre de cliente" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="apelli">Apellido</label>
-                    <input value="<?php echo $cliente->apellido; ?>" required name="apellido" type="text" id="apellido" placeholder="Apellido de cliente" class="form-control">
+                    <input pattern="^([A-Z][a-z]+([ ]?[a-z]?['-]?[A-Z][a-z]+)*)$" title="Tienen que ser Letras" value="<?php echo $cliente->apellido; ?>" required name="apellido" type="text" id="apellido" placeholder="Apellido de cliente" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="dui">DUI</label>
-                    <input value="<?php echo $cliente->dui; ?>" required name="dui" type="text" id="dui" placeholder="DUI de cliente" class="form-control">
+                    <input pattern="[0-9]{9}" title="tiene que ser formato : 9 numeros" value="<?php echo $cliente->dui; ?>" required name="dui" type="text" id="dui" placeholder="DUI de cliente" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">Guardar</button>
                 <a href="../../view/Cliente/ClienteRead.php" class="btn btn-warning">Volver</a>

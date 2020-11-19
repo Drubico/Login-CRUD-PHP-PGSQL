@@ -1,12 +1,12 @@
 
 <?php
 if (!isset($_GET["id"])) {
-	header("Location: ./CuentaCRUD.php");
+	header("Location: ../Cliente/ClienteRead.php");
     exit();
 }
 $idcliente = $_GET["id"];
 include "../../database/Database.php";
-$sentencia = $base_de_datos->query("SELECT ID ,cuenta,ClienteID FROM Cuentas where ClienteID=$idcliente;");
+$sentencia = $base_de_datos->query("SELECT ID ,cuenta,ClienteID FROM Cuentas where ClienteID=$idcliente order by id;");
 $cuentas = $sentencia->fetchAll(PDO::FETCH_OBJ);;
 // if (!$cuentas) {
 //     #No existe
@@ -42,7 +42,7 @@ incluido y reutilizado por otros archivos
     <!-- Definición del menú -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" target="_blank" href="../Cliente/ClienteRead.php">
-        Tarjeta
+        Cuenta
         </a>
         <div class="collapse navbar-collapse" id="miNavbar">
             <ul class="navbar-nav mr-auto">

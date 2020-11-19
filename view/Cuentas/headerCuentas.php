@@ -25,7 +25,7 @@ incluido y reutilizado por otros archivos
     <!-- Definición del menú -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" target="_blank" href="../Cliente/ClienteRead.php">
-        Home
+         Cuenta
         </a>
         <div class="collapse navbar-collapse" id="miNavbar">
             <!-- <ul class="navbar-nav mr-auto">

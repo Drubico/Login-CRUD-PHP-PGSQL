@@ -9,9 +9,13 @@ los datos
 */
 ?>
 <?php
+if (!isset($_GET["id"])) {
+	header("Location: ../Cliente/ClienteRead.php.php");
+    exit();
+}
 $cuentaid = $_GET["id"];
 include "../../database/Database.php";
-$sentencia = $base_de_datos->prepare("SELECT id, clienteid,cuenta FROM cuentas WHERE id = ?;");
+$sentencia = $base_de_datos->prepare("SELECT id, clienteid,cuenta FROM cuentas WHERE id = ? order by id; ");
 $sentencia->execute([$cuentaid]);
 $cuenta = $sentencia->fetchObject();
 
