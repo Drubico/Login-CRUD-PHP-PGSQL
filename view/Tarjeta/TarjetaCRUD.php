@@ -24,15 +24,15 @@ include './headerTarjeta.php'; ?>
 		<input type="hidden" name="cuentaid" value="<?php echo $cuenta->id; ?>">
 			<div class="form-group">
 				<label for="numero_tarjeta">Numero de Tarjeta</label>
-				<input required name="numero_tarjeta" type="text" id="numero_tarjeta" placeholder="Numero de Tarjeta" class="form-control">
+				<input pattern="[0-9]{15}" title="tiene que ser formato : 15 numeros" required name="numero_tarjeta" type="text" id="numero_tarjeta" placeholder="Numero de Tarjeta" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="fecha">Fecha de Vencimiento(yy/mm)</label>
-				<input required name="fecha" type="text" id="fecha" placeholder="Fecha de Vencimiento(yy/mm)" class="form-control">
+				<input  pattern="^\d{2}(\/)(((0)[0-9])|((1)[0-2]))$" title="tiene que ser formato : (yy/mm)" required name="fecha" type="text" id="fecha" placeholder="Fecha de Vencimiento(yy/mm)" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="cvv">Numero de Cvv</label>
-				<input required name="cvv" type="text" id="cvv" placeholder="Numero de Cvv" class="form-control">
+				<input pattern="[0-9]{3}" title="tiene que ser formato : 3 numeros" required name="cvv" type="text" id="cvv" placeholder="Numero de Cvv" class="form-control">
 			</div>
 			<button type="submit" class="btn btn-success">Guardar</button>
 			<a href="../Cliente/ClienteCRUD.php" class="btn btn-warning">Regresar</a>

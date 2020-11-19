@@ -43,7 +43,7 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <input  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
     
     <div class="form-group">
@@ -53,7 +53,7 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}"  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 4 or more characters" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
     </div>
      
     <input type="submit" name="submit" class="btn btn-primary" value="Submit">

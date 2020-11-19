@@ -1,6 +1,6 @@
 -- Database: 
 -- sed
--- admin@admin.com -> admin
+-- admin@123.com -> Adm1n
 -- postgres:
 -- user: admin ;; pass: admin 
 
@@ -76,5 +76,5 @@ insert into Tarjeta(cuentaID,numero_tarjeta,fecha,cvv)
 	values (1,'1234567890123456','20/03','500');
 
 insert into public."user"(name,email,password,mobno)
-	values('admin','admin@admin.com','21232f297a57a5a743894a0e4a801fc3',12345678);
+	values('admin','admin@admin.com','bca91f373908f64e6ffe5700a82491ba',12345678);
 

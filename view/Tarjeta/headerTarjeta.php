@@ -22,7 +22,7 @@ incluido y reutilizado por otros archivos
 <body>
     <!-- Definición del menú -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" target="_blank" href="../index.php">
+        <a class="navbar-brand" target="_blank" href="../Cliente/ClienteRead.php">
         Home
         </a>
 

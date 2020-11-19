@@ -28,7 +28,7 @@ incluido y reutilizado por otros archivos
         <div class="collapse navbar-collapse" id="miNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./ClienteCRUD.php">Agregar</a>
+                    <a class="nav-link" href="./ClienteRead.php">Agregar</a>
                 </li>
             </ul>
         </div>

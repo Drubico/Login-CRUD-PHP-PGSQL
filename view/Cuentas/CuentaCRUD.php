@@ -23,7 +23,7 @@ include './headerCuentas.php'; ?>
 		<form action="../../app/cuentas/CuCreate.php" method="POST">
 			<div class="form-group">
 				<label for="cuenta">Cuenta</label>
-				<input required name="cuenta" type="text" id="cuenta" placeholder="Nombre de Cuenta" class="form-control">
+				<input  required name="cuenta" type="text" id="cuenta" placeholder="Nombre de Cuenta" class="form-control">
 			</div>
 			<input type="hidden" name="clienteid" value="<?php echo $cliente->id; ?>">
 			<button type="submit" class="btn btn-success">Guardar</button>
