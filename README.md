@@ -163,43 +163,54 @@ Adm1n
 
 # Rutas
 http://localhost:3000/view/Login/login.php
+
 #### 127.0.0.1
+
 http://127.0.0.1:3000/view/Login/login.php
 
 #### No deberia de ingresar si no esta login 
 ---
 #### Cliente
-http://localhost:3000/view/Cliente/ClienteRead.php
-http://localhost:3000/view/Cliente/ClienteCRUD.php
-http://localhost:3000/app/cliente/CUpdate.php?id=1
+
+[Cliente/ClienteRead.php](http://localhost:3000/view/Cliente/ClienteRead.php)
+[Cliente/ClienteCRUD.php](http://localhost:3000/view/Cliente/ClienteCRUD.php)
+[Cliente/CUpdate.php](http://localhost:3000/app/cliente/CUpdate.php?id=1)
 
 #### 127.0.0.1
-http://127.0.0.1:3000/view/Cliente/ClienteRead.php
-http://127.0.0.1:3000/view/Cliente/ClienteCRUD.php
-http://127.0.0.1:3000/app/cliente/CUpdate.php?id=1
+
+[Cliente/ClienteRead.php](http://127.0.0.1:3000/view/Cliente/ClienteRead.php)
+[Cliente/ClienteCRUD.php](http://127.0.0.1:3000/view/Cliente/ClienteCRUD.php)
+[Cliente/CUpdate.php](http://127.0.0.1:3000/app/cliente/CUpdate.php?id=1)
 
 ---
 
+---
 #### Cuenta
-http://localhost:3000/view/Cuentas/CuentaRead.php?id=1
-http://localhost:3000/view/Cuentas/CuentaCRUD.php?id=1
-http://localhost:3000/app/cuentas/CuUpdate.php?id=1
+
+[Cuentas/CuentaRead.php](http://localhost:3000/view/Cuentas/CuentaRead.php?id=1)
+[Cuentas/CuentaCRUD.php](http://localhost:3000/view/Cuentas/CuentaCRUD.php?id=1)
+[cuentas/CuUpdate.php](http://localhost:3000/app/cuentas/CuUpdate.php?id=1)
+
 #### 127.0.0.1
-http://127.0.0.1:3000/view/Tarjeta/TarjetaRead.php?id=1
-http://127.0.0.1:3000/view/Tarjeta/TarjetaCRUD.php?id=1
-http://127.0.0.1:3000/app/tarjeta/TUpdate.php?id=1
+
+[Cuentas/CuentaRead.php](http://127.0.0.1:3000/view/Cuentas/CuentaRead.php?id=1)
+[Cuentas/CuentaCRUD.php](http://127.0.0.1:3000/view/Cuentas/CuentaCRUD.php?id=1)
+[cuentas/CuUpdate.php](http://127.0.0.1:3000/app/cuentas/CuUpdate.php?id=1)
 
 ---
 
-#### Tarjeta
-http://localhost:3000/view/Tarjeta/TarjetaRead.php?id=1
-http://localhost:3000/view/Tarjeta/TarjetaCRUD.php?id=1
-http://localhost:3000/app/tarjeta/TUpdate.php?id=1
+---
+#### Cuenta
+
+[Tarjeta/TarjetaRead.php](http://localhost:3000/view/Tarjeta/TarjetaRead.php?id=1)
+[Tarjeta/TarjetaCRUD.php](http://localhost:3000/view/Tarjeta/TarjetaCRUD.php?id=1)
+[tarjeta/TUpdate.php](http://localhost:3000/app/tarjeta/TUpdate.php?id=1)
 
 #### 127.0.0.1
-http://127.0.0.1:3000/view/Tarjeta/TarjetaRead.php?id=1
-http://127.0.0.1:3000/view/Tarjeta/TarjetaCRUD.php?id=1
-http://127.0.0.1:3000/app/tarjeta/TUpdate.php?id=1
+
+[Tarjeta/TarjetaRead.php](http://127.0.0.1:3000/view/Tarjeta/TarjetaRead.php?id=1)
+[Tarjeta/TarjetaCRUD.php](http://127.0.0.1:3000/view/Tarjeta/TarjetaCRUD.php?id=1)
+[tarjeta/TUpdate.php](http://127.0.0.1:3000/app/tarjeta/TUpdate.php?id=1)
 
 ---
 ---
