@@ -5,12 +5,13 @@ include "../../database/Database.php";
 
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     
-
+  //Esto evita ataque de Injection SQL
     $hashpassword = md5($_POST['pwd']);
     $email=$_POST['email'];
     $sentencia = $base_de_datos->prepare("select * from public.user where email = ? and password = ?;");
     $sentencia->execute([$email,$hashpassword]);
     # Fetch all es para traer el usuario $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
+    //Contamos los usuarios que coinciden
     $resultado = $sentencia->fetchColumn();
     if($resultado>0){ 
         
