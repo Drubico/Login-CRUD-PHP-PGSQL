@@ -29,7 +29,7 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
         header("Location: ../Cliente/ClienteRead.php");
     }else{
       echo $resultado;
-      echo "Invalid Details";
+      echo "Lo sentimos pero su credenciales son incorrectas!";
     }
 }
 
@@ -60,7 +60,6 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
       <label for="pwd">Password:</label>
       <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" type="password"  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 4 or more characters" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
     </div>
-     
     <input type="submit" name="submit" class="btn btn-primary" value="Submit">
     <a href="./register.php" class="btn btn-warning">Registrarse</a>
   </form>
