@@ -1,25 +1,29 @@
 <?php
-
-include "../../database/Database.php";
-
+$host = "localhost";
+$port = "5432";
+$dbname = "sed";
+$user = "admin";
+$password = "admin"; 
+$connection_string = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password} ";
+$dbconn = pg_connect($connection_string);
 
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     
 
     $hashpassword = md5($_POST['pwd']);
-    $email=$_POST['email'];
-    $sentencia = $base_de_datos->prepare("select * from public.user where email = ? and password = ?;");
-    $sentencia->execute([$email,$hashpassword]);
-    # Fetch all es para traer el usuario $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
-    $resultado = $sentencia->fetchColumn();
-    if($resultado>0){ 
+    
+    $sql ="select *from public.user where email = '".pg_escape_string($_POST['email'])."' and password ='".$hashpassword."'";
+
+    $data = pg_query($dbconn,$sql); 
+    $login_check = pg_num_rows($data);
+    if($login_check > 0){ 
         
         echo "Login Successfully";    
         header("location: ../Cliente/ClienteRead.php");
 
     }else{
-      echo $resultado;
-      echo "Invalid Details";
+        
+        echo "Invalid Details";
     }
 }
 

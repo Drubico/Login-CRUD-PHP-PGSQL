@@ -77,4 +77,3 @@ insert into Tarjeta(cuentaID,numero_tarjeta,fecha,cvv)
 
 insert into public."user"(name,email,password,mobno)
 	values('admin','admin@admin.com','bca91f373908f64e6ffe5700a82491ba',12345678);
-
