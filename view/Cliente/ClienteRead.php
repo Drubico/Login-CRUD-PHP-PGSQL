@@ -1,5 +1,9 @@
 <?php
-
+session_start();
+if(!isset($_SESSION["login"])){ 
+    header("Location: ../Login/login.php");
+}else{
+}
 /*
 ================================
 
@@ -47,6 +51,9 @@ incluido y reutilizado por otros archivos
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="./ClienteCRUD.php">Agregar</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="../Login/logout.php">Cerrar Sesion</a>
                 </li>
             </ul>
         </div>

@@ -1,10 +1,13 @@
 <?php
+session_start();
+if(isset($_SESSION["login"])){ 
+  header("Location: ../Cliente/ClienteRead.php");
+};
+
+
 
 include "../../database/Database.php";
-
-
 if(isset($_POST['submit'])&&!empty($_POST['submit'])){
-    
   //Esto evita ataque de Injection SQL
     $hashpassword = md5($_POST['pwd']);
     $email=$_POST['email'];
@@ -14,10 +17,16 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     //Contamos los usuarios que coinciden
     $resultado = $sentencia->fetchColumn();
     if($resultado>0){ 
-        
-        echo "Login Successfully";    
-        header("location: ../Cliente/ClienteRead.php");
-
+        // Session 
+        if(isset($_SESSION["login"])){
+          session_unset(); 
+          session_destroy(); 
+          session_start();
+        };
+        $_SESSION["login"]=true;
+        sleep(1); 
+        //var_dump(isset($_SESSION["login"]));
+        header("Location: ../Cliente/ClienteRead.php");
     }else{
       echo $resultado;
       echo "Invalid Details";

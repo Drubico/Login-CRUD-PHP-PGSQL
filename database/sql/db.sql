@@ -62,10 +62,6 @@ REFERENCES Tarjeta (ID)
 ON DELETE CASCADE;
 
 
-
-insert into Usuario(userName,passUser) values ('admin','admin');
-insert into Usuario(userName,passUser) values ('admin1','admin1');
-
 insert into Cliente(Nombre,Apellido,DUI) values ('Diego','Rubi','123456789');
 insert into Cliente(Nombre,Apellido,DUI) values ('Alejandro','Cordova','123456789');
 

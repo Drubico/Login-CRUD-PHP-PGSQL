@@ -1,5 +1,11 @@
 
 <?php
+session_start();
+if(!isset($_SESSION["login"])){ 
+    header("Location: ../Login/login.php");
+}
+
+
 if (!isset($_GET["id"])) {
 	header("Location: ../Cliente/ClienteRead.php");
     exit();
