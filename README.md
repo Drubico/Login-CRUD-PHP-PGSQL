@@ -7,24 +7,39 @@ Adm1n
 
 # rutas
 http://localhost:3000/view/Login/login.php
+
+#### 127.0.0.1
 http://127.0.0.1:3000/view/Login/login.php
 
 ### No deberia de ingresar si no esta login 
 #### Cliente
 http://localhost:3000/view/Cliente/ClienteRead.php
-http://127.0.0.1:3000/view/Cliente/ClienteRead.php
 http://localhost:3000/view/Cliente/ClienteCRUD.php
-http://127.0.0.1:3000/view/Cliente/ClienteCRUD.php
 http://localhost:3000/app/cliente/CUpdate.php?id=1
+
+#### 127.0.0.1
+http://127.0.0.1:3000/view/Cliente/ClienteRead.php
+http://127.0.0.1:3000/view/Cliente/ClienteCRUD.php
 http://127.0.0.1:3000/app/cliente/CUpdate.php?id=1
+
 #### Cuenta
 http://localhost:3000/view/Cuentas/CuentaRead.php?id=1
 http://localhost:3000/view/Cuentas/CuentaCRUD.php?id=1
 http://localhost:3000/app/cuentas/CuUpdate.php?id=1
+
+#### 127.0.0.1
+http://127.0.0.1:3000/view/Tarjeta/TarjetaRead.php?id=1
+http://127.0.0.1:3000/view/Tarjeta/TarjetaCRUD.php?id=1
+http://127.0.0.1:3000/app/tarjeta/TUpdate.php?id=1
 #### Tarjeta
 http://localhost:3000/view/Tarjeta/TarjetaRead.php?id=1
 http://localhost:3000/view/Tarjeta/TarjetaCRUD.php?id=1
 http://localhost:3000/app/tarjeta/TUpdate.php?id=1
+
+#### 127.0.0.1
+http://127.0.0.1:3000/view/Tarjeta/TarjetaRead.php?id=1
+http://127.0.0.1:3000/view/Tarjeta/TarjetaCRUD.php?id=1
+http://127.0.0.1:3000/app/tarjeta/TUpdate.php?id=1
 
 # Ejecutar
 en carpeta raiz ejecutar :
