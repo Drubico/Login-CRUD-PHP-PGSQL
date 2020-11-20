@@ -68,7 +68,7 @@ incluido y reutilizado por otros archivos
 						<th>Dui</th>
 						<th>Editar</th>
 						<th>Eliminar</th>
-						<th>Ceuntas</th>
+						<th>Cuentas</th>
 					</tr>
 				</thead>
 				<tbody>
