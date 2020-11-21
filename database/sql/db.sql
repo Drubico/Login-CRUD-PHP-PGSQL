@@ -1,9 +1,10 @@
+-- admin@admin.com -> Adm1n
+-- admin1@admin1.com -> Adm1n
 
--- Database: 
--- sed
--- admin@123.com -> Adm1n
 -- postgres:
 -- user: admin ;; pass: admin 
+-- Database: 
+-- sed
 
 select * from cliente;
 select * from cuentas;
