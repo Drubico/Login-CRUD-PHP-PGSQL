@@ -6,6 +6,18 @@
 -- Database: 
 -- sed
 
+-- DROP DATABASE sed;
+
+-- CREATE DATABASE sed
+--     WITH 
+--     OWNER = admin
+--     ENCODING = 'UTF8'
+--     LC_COLLATE = 'es_ES.UTF-8'
+--     LC_CTYPE = 'es_ES.UTF-8'
+--     TABLESPACE = pg_default
+--     CONNECTION LIMIT = -1;
+  
+
 select * from cliente;
 select * from cuentas;
 select * from tarjeta;
@@ -21,6 +33,8 @@ Alter table loginTime
 drop CONSTRAINT LoginxTime ;
 drop table IF EXISTS public."user" ;
 drop table IF EXISTS loginTime ;
+
+-- ========================================================================================
 
 -- APARTIR DE AQUI SE CREA LA BASE
 
@@ -98,13 +112,3 @@ insert into public."user"(name,email,password,mobno)
 insert into public."user"(name,email,password,mobno)
 	values('Admin1','admin1@admin1.com','bca91f373908f64e6ffe5700a82491ba',12345678);
 
--- DROP DATABASE sed;
-
-CREATE DATABASE sed
-    WITH 
-    OWNER = admin
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'es_ES.UTF-8'
-    LC_CTYPE = 'es_ES.UTF-8'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
