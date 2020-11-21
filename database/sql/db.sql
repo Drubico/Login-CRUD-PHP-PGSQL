@@ -58,13 +58,6 @@ create TABLE loginTime(
 	timeLogin varchar
 );
 
--- ========================================================================================
-
-Alter table loginTime 
-ADD CONSTRAINT LoginxTime 
-FOREIGN KEY (userID) 
-REFERENCES public."user"(id);
-
 
 -- ========================================================================================
 
