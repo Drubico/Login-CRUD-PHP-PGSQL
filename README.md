@@ -32,7 +32,7 @@
 
 ---
 # 3- Sensitive Data Exposure.
-#### (No hecho)
+#### (Hecho!)
 ---
     Sensitive Data Exposure. Many web applications and APIs do not properly protect sensitive data,
     such as financial,healthcare, and PII. Attackers may steal or modify such weakly protected data 
@@ -75,7 +75,7 @@
     ver archivos confidenciales, modificar los datos de otros usuarios, cambiarlos derechos de acceso, etc. 
 ---    
 # 6 - Security Misconfiguration. 
-#### (por ver)
+#### (SSL)
 ---
     Security Misconfiguration. Security misconfiguration is the most commonly seen issue. 
     This is commonly a result of insecure default configurations, incomplete or ad hoc configurations,
@@ -108,7 +108,7 @@
     desfigurar sitios web o redirigir al usuario a sitios maliciosos. 
 ---
 # 8 - Insecure Deserialization
-#### No se resive Datos en paquetes
+#### (No se resive Datos en paquetes)
 ---
     Insecure Deserialization. Insecure deserialization often leads to remote code execution. 
     Even if deserialization flaws do not result in remote code execution, they can be used to perform attacks,
@@ -120,7 +120,7 @@
     y ataques de escalada de privilegios. 
 ---
 # 9 - Using Components with Known Vulnerabilities.
-#### No ocupamos bibliotecas   
+#### (No ocupamos bibliotecas)
 ---
     Using Components with Known Vulnerabilities. Components, such as libraries, frameworks, 
     and other software modules, run with the same privileges as the application.
