@@ -13,7 +13,6 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
     $email=$_POST['email'];
     $sentencia = $base_de_datos->prepare("select * from public.user where email = ? and password = ?;");
     $sentencia->execute([$email,$hashpassword]);
-    # Fetch all es para traer el usuario $resultado = $sentencia->fetchAll(PDO::FETCH_OBJ);
     //Contamos los usuarios que coinciden
     $resultado = $sentencia->fetchColumn();
     if($resultado>0){ 
@@ -26,6 +25,19 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
         $_SESSION["login"]=true;
         sleep(1); 
         //var_dump(isset($_SESSION["login"]));
+        //===================================================================================
+        //===================================================================================
+        //guardad login en tabla 
+        # Fetch all es para traer el usuario 
+        $guardalogin = $base_de_datos->prepare("select * from public.user where email = ? and password = ?;");
+        $guardalogin->execute([$email,$hashpassword]);
+        $resultadoobjeto = $guardalogin->fetchObject();
+        $loginid=$resultadoobjeto->id;
+        $timenow=date("F d, Y h:i:s", time());
+        $timelogin = $base_de_datos->prepare("INSERT INTO loginTime(userID,timeLogin) VALUES (?,?);");
+        $timeloginresult = $timelogin->execute([$loginid,$timenow]);
+        //===================================================================================
+        //===================================================================================
         header("Location: ../Cliente/ClienteRead.php");
     }else{
       echo $resultado;

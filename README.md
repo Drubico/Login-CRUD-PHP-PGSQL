@@ -223,6 +223,10 @@ php -S localhost:3000
 
 http://localhost:3000
 
+php -S 127.0.0.1:3000
+
+http://127.0.0.1:3000
+
 
 # extra
 buscar como activar o descomentar en php.ini el pg_connect

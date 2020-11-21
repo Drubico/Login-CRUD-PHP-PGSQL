@@ -1,3 +1,4 @@
+
 -- Database: 
 -- sed
 -- admin@123.com -> Adm1n
@@ -8,13 +9,17 @@ select * from cliente;
 select * from cuentas;
 select * from tarjeta;
 select * from public."user";
+select * from loginTime;
 
 -- ========================================================================================
 
 drop table IF EXISTS Tarjeta ;
 drop table IF EXISTS Cuentas ;
 drop table IF EXISTS Cliente ;
+Alter table loginTime 
+drop CONSTRAINT LoginxTime ;
 drop table IF EXISTS public."user" ;
+drop table IF EXISTS loginTime ;
 
 -- APARTIR DE AQUI SE CREA LA BASE
 
@@ -31,6 +36,19 @@ WITH (
   OIDS = FALSE
 );
 
+create TABLE loginTime(
+	ID  SERIAL PRIMARY KEY,
+	userID  int ,
+	timeLogin varchar
+);
+
+Alter table loginTime 
+ADD CONSTRAINT LoginxTime 
+FOREIGN KEY (userID) 
+REFERENCES public."user"(id);
+
+
+
 Create table Cliente(
 ID  SERIAL PRIMARY KEY,
 Nombre varchar,
@@ -42,6 +60,7 @@ ID  SERIAL PRIMARY KEY,
 ClienteID int ,
 cuenta varchar
 );
+
 Create table Tarjeta(
 ID  SERIAL PRIMARY KEY,
 cuentaID  int ,
@@ -49,13 +68,14 @@ numero_tarjeta varchar,
 fecha varchar,
 cvv varchar
 );
-alter table Cuentas 
+
+Alter table Cuentas 
 ADD CONSTRAINT ClientexCuenta 
 FOREIGN KEY (ClienteID) 
 REFERENCES Cliente (ID)
 ON DELETE CASCADE;
 
-alter table Tarjeta 
+Alter table Tarjeta 
 ADD CONSTRAINT CuentaxTarjeta 
 FOREIGN KEY (cuentaID) 
 REFERENCES Tarjeta (ID)
@@ -72,4 +92,18 @@ insert into Tarjeta(cuentaID,numero_tarjeta,fecha,cvv)
 	values (1,'1234567890123456','20/03','500');
 
 insert into public."user"(name,email,password,mobno)
-	values('admin','admin@admin.com','bca91f373908f64e6ffe5700a82491ba',12345678);
+	values('Admin','admin@admin.com','bca91f373908f64e6ffe5700a82491ba',12345678);
+
+insert into public."user"(name,email,password,mobno)
+	values('Admin1','admin1@admin1.com','bca91f373908f64e6ffe5700a82491ba',12345678);
+
+-- DROP DATABASE sed;
+
+CREATE DATABASE sed
+    WITH 
+    OWNER = admin
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'es_ES.UTF-8'
+    LC_CTYPE = 'es_ES.UTF-8'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
