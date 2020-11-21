@@ -34,9 +34,10 @@ drop CONSTRAINT LoginxTime ;
 drop table IF EXISTS public."user" ;
 drop table IF EXISTS loginTime ;
 
--- ========================================================================================
 
 -- APARTIR DE AQUI SE CREA LA BASE
+
+-- ========================================================================================
 
 CREATE TABLE public."user"
 (
@@ -57,12 +58,15 @@ create TABLE loginTime(
 	timeLogin varchar
 );
 
+-- ========================================================================================
+
 Alter table loginTime 
 ADD CONSTRAINT LoginxTime 
 FOREIGN KEY (userID) 
 REFERENCES public."user"(id);
 
 
+-- ========================================================================================
 
 Create table Cliente(
 ID  SERIAL PRIMARY KEY,
@@ -84,6 +88,11 @@ fecha varchar,
 cvv varchar
 );
 
+Alter table loginTime 
+ADD CONSTRAINT LoginxTime 
+FOREIGN KEY (userID) 
+REFERENCES public."user"(id);
+
 Alter table Cuentas 
 ADD CONSTRAINT ClientexCuenta 
 FOREIGN KEY (ClienteID) 
@@ -95,6 +104,7 @@ ADD CONSTRAINT CuentaxTarjeta
 FOREIGN KEY (cuentaID) 
 REFERENCES Tarjeta (ID)
 ON DELETE CASCADE;
+-- ========================================================================================
 
 
 insert into Cliente(Nombre,Apellido,DUI) values ('Diego','Rubi','123456789');
@@ -112,3 +122,4 @@ insert into public."user"(name,email,password,mobno)
 insert into public."user"(name,email,password,mobno)
 	values('Admin1','admin1@admin1.com','bca91f373908f64e6ffe5700a82491ba',12345678);
 
+-- ========================================================================================
